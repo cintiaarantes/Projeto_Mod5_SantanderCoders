@@ -1,0 +1,26 @@
+<!-- <div *ngIf="foodsList.length > 0; else emptyList">
+    <mat-card *ngFor="let food of foodsList">
+        <mat-card-header>
+        <mat-card-title>{{ food?.nome }}</mat-card-title>
+        <mat-card-subtitle>{{food.referencia}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+        <p>
+            {{food.ingredientes}}
+        </p>
+        </mat-card-content>
+        <mat-card-actions>
+        <button mat-button>COMPRAR</button>
+        <button mat-button>FAVORITAR</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<ng-template #emptyList>Nosso cardápio está indisponível! </ng-template> -->
+
+@for(food of foodsList; track food.id){
+    <app-food-card [food]="food" (addFoodToKart)="warnAboutAddFoodToKard(food)"></app-food-card>
+} @empty {
+    <p>Nosso cardápio está indisponível!</p>
+}

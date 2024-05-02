@@ -1,0 +1,8 @@
+span{
+    color: red;
+}
+
+.header-space{
+    display: flex;
+    justify-content: space-between;
+}

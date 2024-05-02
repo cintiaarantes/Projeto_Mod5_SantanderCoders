@@ -1,0 +1,8 @@
+<mat-list>
+    @for(food of addedFoodsList; track food.id){
+        <mat-list-item>{{food.nome}} | {{food.totalAddCarrinho}}</mat-list-item>
+        <mat-divider></mat-divider>
+    } @empty {
+        <mat-list-item>Carrinho vazio</mat-list-item>
+    }
+</mat-list>
